@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos sozinho</title>
+    <style>
+        body {
+            background-color: rgb(6, 108, 108);
+            color: white;
+            font: normal 18pt Arial;
+            line-height: 130%;
+        }
+       
+        div#res {
+            color: black;
+            font: normal 14pt TimesNewRoman;
+            line-height: 120%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de naturalidades</h1>
+    Qual seu país? <input type="text" name="txt" id="txt">
+    <input type="button" value="Verificar" onclick="descobrir()">
+    <div id="res">
+
+    </div>
+    <script>
+        function descobrir(){
+            var txt = document.getElementById('txt')
+            var pais = (txt.value)
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Você nasceu no(a) <strong>${pais}</strong></p>`
+            if (pais == "Brasil") {
+                res.innerHTML = `Se você nasceu no(a) ${pais}, você é Brasileiro!`
+            } else {
+                res.innerHTML = `Se você nasceu no(a) ${pais}, você é estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
