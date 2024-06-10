@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background: rgb(142, 142, 255);
+            color: black;
+            font-weight: bolder;
+        }
+        #area {
+            margin: 10px;
+            background: green;
+            font-size: 2em;
+            text-align: center;
+            line-height: 200px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="Clicar()" onmouseout="Sair()" onmouseenter="entrar()"> Interaja...</div>
+    <script>
+        function Clicar() {
+            var d = document.querySelector('div#area')
+            area.style.background = 'black'
+            area.innerText = 'Clicou!'
+            area.style.color = 'white'
+        }
+        function entrar() {
+            var a = document.querySelector('div#area')
+            area.style.background = 'yellow'
+            area.innerText = 'Entrou!'
+        }
+        function Sair() {
+            var e = document.querySelector('div#area')
+            area.style.background = 'green'
+            area.innerText = 'Saiu!'
+        }
+    </script>
+</body>
+</html>
