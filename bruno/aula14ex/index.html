@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super contador</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-color: darkcyan;
+        }
+        header {
+            color: white;
+            text-align: center;
+            margin: 15px;
+            font-size: 1.5em;
+        }
+        p {
+            padding: 10px;
+        }
+        #res {
+            padding: 10px;
+        }
+        section {
+            margin: auto;
+            width: 400px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.307);
+        }
+        footer {
+            font-style: italic;
+            color: white;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos Contar</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+
+            </p>
+            <p>
+                Inicio: <input type="number" name="ini" id="ini">
+            </p>
+            <p>
+                Fim: <input type="number" name="fim" id="fim">
+            </p>
+            <p>
+                Passo: <input type="number" name="pas" id="pas" min="0">
+            </p>
+            <p>
+                <input type="button" value="Contar" onclick="contar()">
+            </p>
+        </div>
+        <div id="res">
+            Preparando a contagem...
+        </div>
+    </section>
+    <footer>
+        <p>&copy;Bruno Araujo</p>
+    </footer>
+    <script>
+        function contar() { 
+            var ini = document.getElementById('ini')
+            var fim = document.getElementById('fim')
+            var passo = document.getElementById('pas')
+            var res = document.getElementById('res')
+            if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+                res.innerHTML = 'IMPOSSÍVEL CONTAR!'
+            } else {
+                res.innerHTML = 'Contando: <br>'
+                let i = Number(ini.value)
+                let f = Number(fim.value)
+                let p = Number(pas.value)
+                if (i < f) {
+                    for (var c = i; c <= f; c = c + p) {
+                        res.innerHTML += `${c} \u{1F449}`
+                    }
+                } else {
+                    for(var c = i; c >= f; c = c - p ) {
+                        res.innerHTML += `${c} \u{1F449}`
+                    }
+                }
+                res.innerHTML += `\u{1F3C1}`
+            }
+        }
+    </script>
+</body>
+</html>
