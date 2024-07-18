@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+<body>
+    <h1 id="tit">Aula 7</h1>
+    <div class="box">
+        <h2 class="tit">Box 1</h2>
+        <p class="text">Texto 1</p>
+    </div>
+    <div class="box">
+        <h2 class="tit">Box 2</h2>
+        <p class="text">Texto 2</p>
+    </div>
+    <div class="box">
+        <h2 class="tit">Box 3</h2>
+        <p class="text">Texto 3</p>
+    </div>
+    <h3>Abaixo é JS</h3>
+    <script>
+        var titulo = document.querySelector('#tit') // ou ('h1')
+        titulo.textContent = 'DOM'
+        var box = document.querySelectorAll('.box')
+        document.write(box[0].textContent)
+        document.write(box[1].textContent)
+        document.write(box[2].textContent)
+        box[0].textContent = 'texto qualquer'
+        box[1].textContent = 'texto qualquer 2.0'
+        box[2].textContent = 'texto que não é qualquer um'
+        var testeTag = document.getElementsByTagName('div')
+        var testeId = document.getElementById('tit')
+        var testeClass = document.getElementsByClassName('box')
+        document.write(box[0].textContent)
+        document.write(`<p>${testeTag[2].textContent}</p>`)
+        document.write(`<p>${testeClass[1].textContent}</p>`)
+        document.write(`<p>${testeId.textContent}</p>`)
+    </script>
+</body>
+</html>

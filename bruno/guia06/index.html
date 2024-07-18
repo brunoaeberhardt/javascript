@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13</title>
+</head>
+<body>
+    <h1>Estruturas de Repetição</h1>
+    <script>
+        var carros = ['fusca', 'Brasilia', 'Camaro']
+        for (var c = 5;c >= 1;c--) {
+            document.write(c + ' ')
+        }
+        for (var d = 1; d <= 5; d++) {
+            document.write(d + ' ')
+        }
+        for (var i = 0; i < carros.length; i++) {
+            document.write(`<li>${carros[i]}</li>`)
+        }
+        var frutas = ['pera', 'uva', 'maça', 'banana', 'melancia']
+        frutas.forEach(function(fruta, i){
+            document.write(`${i} ${fruta}<br>`)
+        })
+        carros.forEach(function(carro) {
+            document.write(`${carro} <br>`)
+        })
+        var conta = 0
+        while (conta < frutas.length) {
+            
+        }
+    </script>
+</body>
+</html>

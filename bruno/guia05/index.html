@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12</title>
+</head>
+<body>
+    <h1>Estuturas de Desvio</h1>
+    <h2>Condicionais</h2>
+    <hr>
+    <p id="sit1"></p>
+    <p id="sit2"></p>
+    <p id="sit3"></p>
+    <hr>
+    <p>if(), if() else, if() else if() else</p>
+    <p>if ternário condicao: ? verdadeiro:falso</p>
+    <p id="outro"></p>
+    <h2>Decisão</h2>
+    <hr>
+    <p id="escolha"></p>
+    <hr>
+    <p>switch...case</p>
+    <script>
+        var resu1 = document.querySelector('#sit1')
+        var resu2 = document.querySelector('#sit2')
+        var resu3 = document.querySelector('#sit3')
+        var apro = document.querySelector('#outro')
+        var escolha = document.querySelector('#escolha')
+        var notafinal1 = 3
+        var notafinal2 = 8
+        var notafinal3 = 5
+        if (notafinal1 >= 7) {
+            resu1.textContent = 'Aprovado(a)'
+        } else {
+            resu1.textContent = 'Reprovado(a)'
+        }
+        if (notafinal2 >= 7) {
+            resu2.textContent = 'Aprovado(a)'
+        } else {
+            resu2.textContent = 'Reprovado(a)'
+        }
+        if (notafinal3 >= 7) {
+            resu3.textContent = 'Aprovado(a)'
+        } else if (notafinal3 >= 3){
+            resu3.textContent = 'Em recuperação'
+        } else {
+            resu3.textContent = 'Reprovado(a)'
+        }
+        notafinal3 >= 7 ? apro.textContent = 'Passou' : apro.textContent = 'Ficou'
+        var situacao = resu3.textContent
+        switch(situacao) {
+            case 'Aprovado':
+                escolha.textContent = 'Passou de ano'
+                break
+            case 'Reprovado':
+                escolha.textContent = 'Não passou de ano'
+                break
+            case 'Em recuperação':
+                escolha.textContent = 'Ainda há uma chance'
+                break
+            default:
+                escolha.textContent = 'Estude'
+        }
+    </script>
+</body>
+</html>

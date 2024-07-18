@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            margin-left: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            margin: 20px 0px;
+        }
+        .modos {
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        #light {
+            background-color: rgb(235, 235, 235);
+        }
+        #light:hover {
+            background-color: rgb(175, 175, 175);
+            transition-duration: 0.2s;
+        }
+        #dark {
+            background-color: rgb(28, 28, 28);
+            color: white;
+        }
+        #dark:hover {
+            background-color: rgb(117, 117, 117);
+            color: white;
+            transition-duration: .2s;
+        }
+        article {
+            margin-left: 10px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        .escura {
+            background-color: sienna;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Aula 09</h1>
+        <span id="botoes">
+            <button class="modos" id="light" >Light</button>
+            <button class="modos" id="dark" >Dark</button>
+        </span>
+        <section id="conteudos">
+            <article class="box">
+                <h2>Imagem</h2>
+                <figure>
+                    <img src="foto" alt="Foto" id="foto">
+                </figure>
+                <p>Texto de teste 1 em parágrafo</p>
+            </article>
+            <article class="box">
+                <h2>Titulo</h2>
+                <p>Texto de teste 2 em parágrafo</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        var titulo = document.querySelector("h1")
+        titulo.textContent = 'Aula 09 Manipulando CSS'
+        var imagem = document.querySelector('#foto')
+        imagem.setAttribute('src', '../guia03/image.png')
+        imagem.setAttribute('width', '300px')
+        titulo.style.color ='green'
+        titulo.style.backgroundColor = 'black'
+        titulo.style.borderBottom ='2px solid green'
+        titulo.style.padding = '5px'
+        titulo.style.borderRadius = '5px'
+        var fundo = document.querySelector('body')
+        box[0].setAttribute('class', 'escura')
+        box[0].removeAttribute('class')
+        var box = document.querySelectorAll('.box')
+        function clareou() {
+            fundo.style.backgroundColor = ' lightgray'
+        }
+        function escurou() {
+            fundo.style.backgroundColor = 'black'
+            fundo.style.color = 'white'
+        }
+    </script>
+</body>
+</html>
